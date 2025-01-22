@@ -13,6 +13,10 @@
   scroll-behavior: smooth;
 }
 
+#fullpage {
+  background-color: var(--main-bg-color);
+}
+
 /* NAVBAR */
 .header-links {
   width: 100%;
@@ -321,10 +325,6 @@
   }
 }
 
-.about-me {
-  background-color: var(--main-bg-color);
-}
-
 .about-me-text {
   display: flex;
   flex-direction: column;
@@ -339,7 +339,7 @@
   height: 100vh;
 }
 
-.about-me-text h1 {
+h1 {
   font-family: 'Raleway', sans-serif;
   color: var(--main-text-color);
   font-size: 40px;
@@ -397,36 +397,24 @@
   }
 }
 
+.about-me-skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  color: var(--main-text-color);
+  font-size: 20px;
+  text-align: justify;
+  margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
+}
+
 .skills-programming {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; /* Pour permettre aux icônes de passer à la ligne si nécessaire */
-  gap: 10px; /* Espacement entre les icônes */
-}
-
-@media (max-width: 600px) {
-  .about-me-text {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .about-me-text h1 {
-    font-size: 24px;
-  }
-
-  .about-me-text p {
-    font-size: 16px;
-  }
-
-  .resume.resume-2 {
-    width: 100%;
-    padding: 15px 0;
-    font-size: 14px;
-  }
-
-  .skills-programming img {
-    width: 50px; /* Ajustez la taille des icônes pour les téléphones */
-    height: 50px;
-  }
+  gap: 20px; /* Espacement entre les icônes */
 }
