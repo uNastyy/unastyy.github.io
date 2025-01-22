@@ -1,0 +1,432 @@
+:root {
+  --main-bg-color: #DDE1E4;
+  --main-text-color: #3E5060;
+  --header: #1B263B;
+  --button: #4A6FA5;
+  --contrast: #F6F7F8;
+  --detail: #FF6363;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.header-links {
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+.header-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-links ul li {
+  margin-right: 10px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+.header-links ul li a {
+  font-weight: 400;
+  color: var(--contrast);
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.header-links ul li a:hover {
+  color: var(--detail) !important;
+}
+
+.banner-text {
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.banner-text.scrolled .header-links ul li a {
+  color: var(--header) !important;
+  -webkit-transition: all 0.2s ease-in;
+  height: 60px;
+}
+
+.banner-text.scrolled .header-links ul li a:hover {
+  color: var(--detail) !important;
+}
+
+.banner-text ul {
+  height: 50px;
+  float: right;
+}
+
+.banner-text ul li {
+  display: inline-block;
+  padding: 25px 15px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+}
+
+.banner-text ul li:hover {
+  cursor: pointer;
+}
+
+.active {
+  color: var(--detail) !important;
+}
+
+/* BACKGROUND */
+
+.animation-area {
+  background: #4A6FA5;
+  background: -webkit-linear-gradient(to right, #3E5060, #1B263B);
+  background: linear-gradient(to right, #3E5060, #1B263B);
+  width: 100%;
+  height: 100vh;
+}
+
+.box-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.box-area li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 25px;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate 20s linear infinite;
+  bottom: -150px;
+}
+
+.box-area li:nth-child(1) {
+  left: 86%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(2) {
+  left: 12%;
+  width: 30px;
+  height: 30px;
+  animation-delay: 1.5s;
+  animation-duration: 10s;
+}
+
+.box-area li:nth-child(3) {
+  left: 70%;
+  width: 100px;
+  height: 100px;
+  animation-delay: 5.5s;
+}
+
+.box-area li:nth-child(4) {
+  left: 42%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 15s;
+}
+
+.box-area li:nth-child(5) {
+  left: 65%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 0s;
+}
+
+.box-area li:nth-child(6) {
+  left: 15%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3.5s;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-800px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.picture img {
+  width: 170px;
+  /* Taille de l'avatar */
+  height: 170px;
+  /* Taille de l'avatar */
+  border-radius: 50%;
+  /* Transformer en cercle */
+  object-fit: cover;
+  /* Couvrir l'image dans le cercle */
+}
+
+.picture img:hover {
+  transform: scale(1.1);
+  /* Zoomer l'image au survol */
+  transition: transform 0.5s;
+  /* Animation de 0.5s */
+}
+
+.opaque-bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  /* Augmentez la largeur */
+  height: 50%;
+  /* Ajustez la hauteur automatiquement */
+  margin: auto;
+  background-color: var(--main-text-color);
+  position: absolute;
+  border-radius: 10px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.opaque-bg h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+  /* Réduisez la taille de la police si nécessaire */
+  margin: 5px 0 0 0;
+  /* Ajustez la marge pour un meilleur espacement */
+  font-family: "Raleway", sans-serif !important;
+}
+
+.opaque-bg p {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  font-size: 40px;
+  /* Réduisez la taille de la police */
+  margin: 5px 0 0 0;
+  /* Ajustez la marge pour un meilleur espacement */
+}
+
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+  color: var(--header);
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: var(--header);
+  }
+}
+
+/* Arrow Button 
+-----------------------------------*/
+.container-arrow {
+  margin-top: -20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding-bottom: 15px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.container-arrow:hover,
+.container-arrow:focus {
+  text-decoration: none;
+}
+
+/* Arrow Bouncing */
+.container-arrow span {
+  display: inline-block;
+  font-size: 80px;
+  animation: .7s down infinite alternate;
+  -webkit-animation: .7s down infinite alternate;
+}
+
+/***Animation Arrow down***/
+@keyframes down {
+  0% {
+    transform: translateY(0px)
+  }
+
+  100% {
+    transform: translateY(20px)
+  }
+}
+
+@-webkit-keyframes down {
+  0% {
+    -webkit-transform: translateY(0px)
+  }
+
+  100% {
+    -webkit-transform: translateY(20px)
+  }
+}
+
+
+.bounce {
+  animation: bounceIn 2s infinite 1s;
+}
+
+@keyframes bounceIn {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.about-me {
+  background-color: var(--main-bg-color);
+}
+
+.about-me-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  color: var(--main-text-color);
+  font-size: 20px;
+  text-align: justify;
+  margin: 0 auto;
+  width: 100vh;
+  height: 100vh;
+}
+
+.about-me-text h1 {
+  font-family: 'Raleway', sans-serif;
+  color: var(--main-text-color);
+  font-size: 40px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.resume {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: var(--main-text-color);
+  text-transform: capitalize;
+  background-color: var(--detail);
+  margin-top: 20px;
+  padding: 20px 0px;
+  width: 150px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.resume.resume-2 {
+  transition: all 0.2s linear 0s;
+  position: relative; /* Assurez-vous que l'élément parent a une position relative */
+
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1c1";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+
+  &:hover {
+    text-indent: -30px;
+
+    &:before {
+      right: 0;
+      text-indent: 0px;
+    }
+  }
+}
+
+.skills-programming {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Pour permettre aux icônes de passer à la ligne si nécessaire */
+  gap: 10px; /* Espacement entre les icônes */
+}
+
+@media (max-width: 600px) {
+  .about-me-text {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .about-me-text h1 {
+    font-size: 24px;
+  }
+
+  .about-me-text p {
+    font-size: 16px;
+  }
+
+  .resume.resume-2 {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+
+  .skills-programming img {
+    width: 50px; /* Ajustez la taille des icônes pour les téléphones */
+    height: 50px;
+  }
+}
