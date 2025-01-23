@@ -34,4 +34,26 @@ $(document).ready(function () {
 
   // initialize wow.js
   new WOW().init();
+
+  document.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section'); // Ensure each section has an ID
+    const navLinks = document.querySelectorAll('.bottom-nav a');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 50) { // Adjust offset as needed
+            currentSection = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(currentSection)) {
+            link.classList.add('active');
+        }
+    });
+});
+
 });
