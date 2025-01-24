@@ -24,7 +24,8 @@ $(document).ready(function () {
     document.addEventListener("scroll", (e) => {
       const scrolled = document.scrollingElement.scrollTop;
 
-      if (scrolled > 80) { //adjust to suit your need of when transition start
+      if (scrolled > 80) {
+        //adjust to suit your need of when transition start
         navbar.classList.add("scrolled");
       } else {
         navbar.classList.remove("scrolled");
@@ -32,28 +33,38 @@ $(document).ready(function () {
     });
   })();
 
-  // initialize wow.js
-  new WOW().init();
+  // Code pour changer la classe active des liens de la navbar en fonction de la section visible
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".bottom-nav a");
 
-  document.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section'); // Ensure each section has an ID
-    const navLinks = document.querySelectorAll('.bottom-nav a');
+    function changeActiveLink() {
+      let index = sections.length;
 
-    let currentSection = '';
+      while (--index && window.scrollY + 50 < sections[index].offsetTop) {}
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 50) { // Adjust offset as needed
-            currentSection = section.getAttribute('id');
-        }
-    });
+      navLinks.forEach((link) => link.classList.remove("active"));
+      navLinks[index].classList.add("active");
+    }
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(currentSection)) {
-            link.classList.add('active');
-        }
-    });
+    changeActiveLink();
+    window.addEventListener("scroll", changeActiveLink);
+  });
+
+  const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    loop: true, // Pour un défilement infini
 });
 
+  // initialize wow.js
+  new WOW().init();
 });
