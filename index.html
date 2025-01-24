@@ -3,128 +3,249 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Romain BOUISSOU</title>
-    <link rel="icon" type="image/x-icon" href="mcqueen.png" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <title>Romain BOUISSOU</title>
   </head>
-  <header class="banner-text">
-    <div class="header-links">
-      <ul class="navbar-nav">
-        <li class="nav-item active"><a href="#home">HOME</a></li>
-        <li class="nav-item"><a href="#about">ABOUT ME</a></li>
-        <li class="nav-item"><a href="#skills">SKILLS</a></li>
-        <li class="nav-item"><a href="#portfolio">PORTFOLIO</a></li>
-        <li class="nav-item"><a href="#contact">CONTACT</a></li>
-      </ul>
-    </div>
-  </header>
   <body>
-    <div id="fullpage">
-      <section class="animation-area" id="home">
-        <ul class="box-area">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-        <div class="opaque-bg">
-          <div class="picture">
-            <img src="moi-bb-machine-a-laver.jpg" alt="Logo" />
-          </div>
-          <h2>ROMAIN<span style="color: #ff6363">/</span>BOUISSOU</h2>
+    <div class="bottom-nav">
+      <a href="#accueil"><i class="fas fa-home"></i></a>
+      <a href="#a-propos"><i class="fas fa-user"></i></a>
+      <a href="#competences"><i class="fas fa-tools"></i></a>
+      <a href="#projets"><i class="fas fa-folder"></i></a>
+      <a href="#contact"><i class="fas fa-envelope"></i></a>
+    </div>
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <section id="accueil">
+        <div class="photo">
+          <img src="moi-bb-machine-a-laver.jpg" alt="Photo de profil" />
+          <h1>
+            ROMAIN<span
+              style="
+                color: #ff6363;
+                font-family: 'Raleway', sans-serif !important;
+              "
+              >/</span
+            >BOUISSOU
+          </h1>
           <p>
-            <span id="holder" style="color: #ff6363"></span
+            <span id="holder" style="color: #f6f7f8; font-size: 20px"></span
             ><span class="blinking-cursor">|</span>
           </p>
         </div>
-        <a class="container-arrow scroll-to arrow bounce" href="#about">
-          <img src="arrow-down.png" alt="" />
-        </a>
-      </section>
-
-      <section class="about-me" id="about">
-        <div class="about-me-text">
-          <h1>ABOUT ME</h1>
-          <p>
-            Actuellement en 3ᵉ année de BUT Informatique à Toulouse, je me
-            spécialise dans la conception, le développement et la validation
-            d'applications. Passionné par l'automobile, les nouvelles
-            technologies et motivé par les défis, j'ai eu l'occasion de
-            travailler sur des projets variés en collaboration avec d'autres
-            étudiants, notamment lors d'événements comme la "Nuit de l'Info".
-            Mes compétences s'étendent sur plusieurs langages, comme Python,
-            Java, HTML, CSS, et PHP, ainsi que sur des bases de données MySQL et
-            NoSQL. Curieux et impliqué , je suis enthousiaste à l'idée de
-            contribuer à des projets innovants tout en renforçant mes
-            connaissances.
-          </p>
-          <a
-            class="resume resume-2"
-            href="CV_Romain_BOUISSOU.pdf"
-            target="_blank"
-            title="Ouvrir le CV en PDF"
-            ><strong>Mon CV</strong></a
-          >
-        </div>
-
-        <div class="about-me-skills" id="skills">
-          <h1>Mes compétences</h1>
-          <div class="skills-container">
-            <div class="skills-section">
-              <h3>Langages de programmation</h3>
-              <div class="skills-programming">
-                <img src="https://skillicons.dev/icons?i=html" title="HTML" />
-                <img src="https://skillicons.dev/icons?i=css" title="CSS" />
-                <img src="https://skillicons.dev/icons?i=php" title="PHP" />
-                <img src="https://skillicons.dev/icons?i=py" title="Python" />
-                <img src="https://skillicons.dev/icons?i=fastapi" title="FastAPI"/>
-                <img src="https://skillicons.dev/icons?i=mongodb" title="MongoDB"/>
-                <img src="https://skillicons.dev/icons?i=mysql" title="MySQL" />
-                <img src="https://skillicons.dev/icons?i=java" title="Java" />
-              </div>
-            </div>
-            <div class="skills-section">
-              <h3>Technologies & outils</h3>
-              <div class="skills-programming">
-                <img
-                  src="https://skillicons.dev/icons?i=docker"
-                  title="Docker"
-                />
-                <img
-                  src="https://skillicons.dev/icons?i=kubernetes"
-                  title="Kubernetes"
-                />
-                <img src="https://skillicons.dev/icons?i=figma" title="Figma" />
-                <img
-                  src="https://skillicons.dev/icons?i=eclipse"
-                  title="Eclipse IDE"
-                />
-                <img
-                  src="https://skillicons.dev/icons?i=postman"
-                  title="Postman"
-                />
-                <img
-                  src="https://skillicons.dev/icons?i=vscode"
-                  title="Visual Studio Code"
-                />
-                <img
-                  src="https://skillicons.dev/icons?i=windows"
-                  title="Windows"
-                />
-                <img src="https://skillicons.dev/icons?i=linux" title="Linux" />
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
     </div>
+    <section id="a-propos">
+      <h2>A propos</h2>
+      <p>
+        Actuellement en 3ᵉ année de BUT Informatique à Toulouse, je me
+        spécialise dans la conception, le développement et la validation
+        d'applications. Passionné par l'automobile, les nouvelles technologies
+        et motivé par les défis, j'ai eu l'occasion de travailler sur des
+        projets variés en collaboration avec d'autres étudiants, notamment lors
+        d'événements comme la "Nuit de l'Info". Mes compétences s'étendent sur
+        plusieurs langages, comme Python, Java, HTML, CSS, et PHP, ainsi que sur
+        des bases de données MySQL et NoSQL. Curieux et impliqué, je suis
+        enthousiaste à l'idée de contribuer à des projets innovants tout en
+        renforçant mes connaissances.
+      </p>
+      <div class="skills-boxes">
+        <div class="skill-box" data-hover-text="Précis et attentif aux détails">
+          <i class="fas fa-check-circle"></i>
+          Rigoureux
+        </div>
+        <div class="skill-box" data-hover-text="Aptitude à travailler efficacement en équipe">
+          <i class="fas fa-users"></i>
+          Collaboratif
+        </div>
+        <div class="skill-box" data-hover-text="Analyser et interpréter les données et les informations">
+          <i class="fas fa-chart-line"></i>
+          Analytique
+        </div>
+      </div>
+      <hr class="separator">
+      <a href="CV_Romain_BOUISSOU.pdf" class="resume resume-2" target="_blank">Voir mon CV</a>
+    </section>
+
+    <section id="competences">
+      <h2>Compétences</h2>
+      <div class="competences">
+        <div>
+          <h3>Langages de programmation</h3>
+          <ul>
+            <li>
+              <img src="https://skillicons.dev/icons?i=html" title="HTML" />
+              HTML
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=css" title="CSS" /> CSS
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=php" title="PHP" /> PHP
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=py" title="Python" />
+              Python
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=fastapi"
+                title="FastAPI"
+              />
+              FastAPI
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=mongodb"
+                title="MongoDB"
+              />
+              MongoDB
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=mysql" title="MySQL" />
+              MySQL
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=java" title="Java" />
+              Java
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3>Outils et technologies</h3>
+          <ul>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=docker"
+                title="Docker"
+              />Docker
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=kubernetes"
+                title="Kubernetes"
+              />Kubernetes
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=figma" title="Figma" />
+              Figma
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=eclipse"
+                title="Eclipse IDE"
+              />Eclipse IDE
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=postman"
+                title="Postman"
+              />Postman
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=vscode"
+                title="Visual Studio Code"
+              />Visual Studio Code
+            </li>
+            <li>
+              <img
+                src="https://skillicons.dev/icons?i=windows"
+                title="Windows"
+              />Windows
+            </li>
+            <li>
+              <img src="https://skillicons.dev/icons?i=linux" title="Linux" />
+              Linux
+            </li>
+          </ul>
+        </div>
+        <div class="scrum-box">
+          <h3>Méthode Scrum</h3>
+          <p>La méthode Scrum est une approche agile de gestion de projet qui permet de livrer des produits de haute qualité de manière itérative et incrémentale.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets">
+      <h2>Projets</h2>
+      <div class="grid">
+        <div>
+          <img
+            src="illustration-projet1.jpg"
+            alt="Projet 1"
+            style="width: 100%"
+          />
+          <h3>Projet 1</h3>
+          <a href="https://github.com/votre-projet1" target="_blank"
+            >Voir sur GitHub</a
+          >
+        </div>
+        <div>
+          <img
+            src="illustration-projet2.jpg"
+            alt="Projet 2"
+            style="width: 100%"
+          />
+          <h3>Projet 2</h3>
+          <a href="https://github.com/votre-projet2" target="_blank"
+            >Voir sur GitHub</a
+          >
+        </div>
+        <!-- Ajoutez plus de projets ici -->
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>Suivez-moi sur :</p>
+      <a href="https://linkedin.com" target="_blank" class="linkedin">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      |
+      <a href="https://github.com" target="_blank" class="github">
+        <i class="fab fa-github"></i>
+      </a>
+    </footer>
   </body>
 </html>
