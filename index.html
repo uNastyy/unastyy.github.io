@@ -62,7 +62,7 @@
           </p>
         </div>
         <a class="container-arrow scroll-to arrow bounce" href="#a-propos">
-          <img class="arrow" src="img/arrow-down.png" alt="" />
+          <img class="arrow" src="img/arrow-down.png" alt />
         </a>
       </section>
     </div>
@@ -105,7 +105,7 @@
     <section id="competences" class="main-section">
       <h2>Compétences</h2>
       <div class="competences">
-        <div>
+        <div class="competences-box">
           <h3>Langages de programmation</h3>
           <ul>
             <li>
@@ -113,10 +113,12 @@
               <p>HTML</p>
             </li>
             <li>
-              <img src="https://skillicons.dev/icons?i=css" title="CSS" /> <p>CSS</p>
+              <img src="https://skillicons.dev/icons?i=css" title="CSS" />
+              <p>CSS</p>
             </li>
             <li>
-              <img src="https://skillicons.dev/icons?i=php" title="PHP" /> <p>PHP</p>
+              <img src="https://skillicons.dev/icons?i=php" title="PHP" />
+              <p>PHP</p>
             </li>
             <li>
               <img src="https://skillicons.dev/icons?i=py" title="Python" />
@@ -144,7 +146,7 @@
             </li>
           </ul>
         </div>
-        <div>
+        <div class="competences-box">
           <h3>Outils et technologies</h3>
           <ul>
             <li>
@@ -187,11 +189,32 @@
             </li>
           </ul>
         </div>
-        <div class="scrum-box">
-          <h3>Méthode Scrum</h3>
-          <p>La méthode Scrum est une approche agile de gestion de projet qui
-            permet de livrer des produits de haute qualité de manière itérative
-            et incrémentale.</p>
+        <div class="agile-box">
+          <h3>Méthodes Agiles</h3>
+          <div class="agile-box-content">
+            <div class="agile-content vertical-separator">
+              <h3>Scrum</h3>
+              <p>La méthode Scrum est une approche agile de gestion de projet
+                qui se concentre sur la livraison itérative et incrémentale de
+                produits de haute qualité. Elle repose sur des rôles, des
+                événements et des artefacts spécifiques pour structurer et gérer
+                le travail de l'équipe. Scrum favorise la collaboration, la
+                flexibilité et l'amélioration continue, permettant aux équipes
+                de s'adapter rapidement aux changements et de maximiser la
+                valeur livrée aux clients.</p>
+            </div>
+            <div class="agile-content">
+              <h3>Kanban</h3>
+              <p>La méthode Kanban est une approche visuelle de gestion de
+                projet qui utilise des tableaux pour représenter les tâches et
+                leur progression. Elle permet de visualiser le flux de travail
+                et d'améliorer continuellement les processus. En limitant le
+                travail en cours et en se concentrant sur l'achèvement des
+                tâches, Kanban aide les équipes à être plus efficaces et à
+                livrer des produits de haute qualité de manière régulière et
+                prévisible.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -205,30 +228,52 @@
         <input type="radio" id="tab3" name="tab-control">
         <input type="radio" id="tab4" name="tab-control">
         <ul>
-          <li title="Messagerie instantanée"><label for="tab1"
-              role="button"><svg
-                viewBox="0 0 24 24"><path
-                  d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
-              </svg><br><span>Messagerie instantanée</span></label></li>
-          <li title="Delivery Contents"><label for="tab2"
-              role="button"><svg viewBox="0 0 24 24">
-                <path
-                  d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z" />
-              </svg><br><span>Kitchen Wizard</span></label></li>
-          <li title="Shipping"><label for="tab3" role="button"><svg
+          <li title="Palendar"><label for="tab1" role="button"><svg
                 viewBox="0 0 24 24">
                 <path
-                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"</svg><br><span>Palendar</span></label></li>
-              <li
-                title="Returns"><label for="tab4" role="button"><svg
+                  d="M5 5a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1h1a1 1 0 0 0 1-1 1 1 0 1 1 2 0 1 1 0 0 0 1 1 2 2 0 0 1 2 2v1a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a2 2 0 0 1 2-2ZM3 19v-7a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm6.01-6a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm-10 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0Zm6 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0Zm2 0a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"</svg>
+                  <br><span>Palendar</span></label></li>
+              <li title="Messagerie instantanée"><label for="tab2"
+                  role="button"><svg
+                    viewBox="0 0 24 24"><path
+                      d="M16 10.5h.01m-4.01 0h.01M8 10.5h.01M5 5h14a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-6.6a1 1 0 0 0-.69.275l-2.866 2.723A.5.5 0 0 1 8 18.635V17a1 1 0 0 0-1-1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z" />
+                  </svg><br><span>Messagerie instantanée</span></label></li>
+              <li title="Kitchen Wizard"><label for="tab3"
+                  role="button"><svg viewBox="0 0 24 24">
+                    <path
+                      d="M15 4h3a1 1 0 0 1 1 1v15a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h3m0 3h6m-3 5h3m-6 0h.01M12 16h3m-6 0h.01M10 3v4h4V3h-4Z" />
+                  </svg><br><span>Kitchen Wizard</span></label></li>
+              <li title="Nuit de l'Info"><label for="tab4" role="button"><svg
                     viewBox="0 0 24 24">
                     <path
-                    d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" />
-                  </svg><br><span>Nuit de l'Info</span></label></li>
+                      d="M12 21a9 9 0 0 1-.5-17.986V3c-.354.966-.5 1.911-.5 3a9 9 0 0 0 9 9c.239 0 .254.018.488 0A9.004 9.004 0 0 1 12 21Z" /></svg>
+                  <br><span>Nuit de l'Info</span></label></li>
             </ul>
 
             <div class="slider"><div class="indicator"></div></div>
             <div class="content">
+              <section class="section-projet">
+                <h2>Palendar</h2>
+                <div>
+                  <div class="left-content left-content-horizontal">
+                    <img src="img/palendar.png" alt="Messagerie instantanée"
+                      class="horizontal">
+                  </div>
+                  <div class="right-content right-content-horizontal">
+                    <p>Développé en TypeScript et Tailwind CSS avec React pour
+                      la partie Front-End et Python FastAPI pour le Back-End.
+                      Palendar est un outil de calendrier collaboratif
+                      permettant à des amis et des proches d'organiser des
+                      événements en renseignant leurs disponibilités. Pour
+                      réaliser cette application nous avons utilisé la méthode
+                      Kanban afin d'organiser notre travail. </p>
+                    <a href="https://beta.palendar.gamingdy.fr"
+                      class="resume resume-4" target="_blank"
+                      rel="noopener noreferrer">Site web</a>
+                  </div>
+                </div>
+              </section>
+
               <section class="section-projet">
                 <h2>Messagerie instantanée</h2>
                 <div>
@@ -272,21 +317,7 @@
                   </div>
                 </div>
               </section>
-              <section class="section-projet">
-                <h2>Palendar</h2>
-                <div>
-                  <div class="left-content left-content-horizontal">
-                    <img src="img/palendar.png" alt="Messagerie instantanée"
-                      class="horizontal">
-                  </div>
-                  <div class="right-content right-content-horizontal">
-                    <p>Développé en TypeScript et Tailwind CSS avec React pour la partie Front-End et Python FastAPI pour le Back-End. Palendar est un outil de calendrier collaboratif permettant à des amis et des proches d'organiser des événements en renseignant leurs disponibilités.  </p>
-                    <a href="https://beta.palendar.gamingdy.fr"
-                      class="resume resume-4" target="_blank"
-                      rel="noopener noreferrer">Site web</a>
-                  </div>
-                </div>
-              </section>
+
               <section class="section-projet">
                 <h2>Nuit de l'Info</h2>
                 <div>
@@ -295,11 +326,16 @@
                       class="horizontal">
                   </div>
                   <div class="right-content right-content-horizontal">
-                    <p>La Nuit de l'Info est un événement organisé à l'échelle nationale où les étudiants en informatique doivent relever un défi, réaliser une application en une nuit. J'ai eu l'occasion d'y participer à 3 reprises, en 2024 nous devions concevoir une application pour la fondation Race for Water.</p>
+                    <p>La Nuit de l'Info est un événement organisé à l'échelle
+                      nationale où les étudiants en informatique doivent relever
+                      un défi, réaliser une application en une nuit. J'ai eu
+                      l'occasion d'y participer à 3 reprises, en 2024 nous
+                      devions concevoir une application pour la fondation Race
+                      for Water.</p>
                     <a href="https://limit-breker.gamingdy.fr"
                       class="resume resume-4" target="_blank"
                       rel="noopener noreferrer">Site web</a>
-                      <a href="https://github.com/Limit-Breker/Nuit-Info-2024"
+                    <a href="https://github.com/Limit-Breker/Nuit-Info-2024"
                       class="resume resume-3" target="_blank"
                       rel="noopener noreferrer">GitHub</a>
                   </div>

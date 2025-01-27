@@ -409,7 +409,7 @@ h2 {
     width: 100%;
 }
 
-.competences div {
+.competences .competences-box {
     flex: 1 1 45%;
     background-color: #F6F7F8;
     padding: 1.5rem;
@@ -427,7 +427,7 @@ h2 {
     padding: 0;
     text-align: center;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    grid-template-columns: repeat(4, 1fr); /* Deux colonnes */
     gap: 0.5rem; /* Réduisez l'espacement entre les éléments */
 }
 
@@ -450,7 +450,7 @@ h2 {
   font-weight:500;
 }
 
-.scrum-box {
+.agile-box {
     flex: 1 1 100%;
     background-color: #F6F7F8;
     padding: 1.5rem;
@@ -460,15 +460,51 @@ h2 {
     margin-top: 1rem;
 }
 
-.scrum-box h3 {
+.agile-box h3 {
     color: #1B263B;
+    margin-bottom: 1rem;
 }
 
-.scrum-box p {
+.agile-content p {
     color: #3E5060;
     font-size: 1rem;
     margin-top: 0.5rem;
+    text-align: justify;
 }
+
+.agile-box-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+}
+
+.agile-content {
+    flex: 1 1 45%;
+    padding: 1.5rem;
+}
+
+.vertical-separator {
+  border-right: #000;
+  border-right-style: solid;
+  border-right-width: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .competences div ul li p {
+    font-size: 0.8rem;
+}
+  .agile-box-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vertical-separator {
+    border-right: none;
+    border-bottom: #000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+  }
+}
+
 /* Fin des styles de la section compétences */
 
 /* Styles de la section contact */
