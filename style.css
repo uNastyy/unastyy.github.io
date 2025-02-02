@@ -267,7 +267,7 @@ h2 {
 
 /* Styles de la section à propos */
 #a-propos p {
-    max-width: 800px;
+    max-width: 900px;
     line-height: 1.5;
     text-align: justify;
     margin-bottom: 1.5rem;
@@ -370,6 +370,7 @@ h2 {
 .skill-box:hover::after {
     opacity: 1;
     visibility: visible;
+    z-index: 50;
 }
 
 /* Media query pour les téléphones */
@@ -418,11 +419,12 @@ h2 {
 }
 
 .competences div h3 {
+    margin-bottom: 1rem;
     text-align: center;
     color: #1B263B;
 }
 
-.competences div ul {
+.competences-box ul {
     list-style-type: none;
     padding: 0;
     text-align: center;
@@ -431,7 +433,7 @@ h2 {
     gap: 0.5rem; /* Réduisez l'espacement entre les éléments */
 }
 
-.competences div ul li {
+.competences-box div ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -440,7 +442,7 @@ h2 {
     color: #3E5060;
 }
 
-.competences div ul li img {
+.competences-box div ul li img {
     margin-top: 0.5rem; /* Ajoutez un espace entre le texte et l'image */
 }
 
@@ -450,6 +452,40 @@ h2 {
   font-weight:500;
 }
 
+.but-skills {
+    width: 100%;
+    text-align: center;
+}
+
+.but-skills-list ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Deux colonnes */
+}
+
+@media (max-width: 768px) {
+
+  .but-skills {
+    padding: 0;
+  }
+
+  .but-skills-list ul {
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+  }
+}
+
+.but-skills-list ul li {
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #F6F7F8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.but-skills-list ul li:hover {
+  color: #FF6363;
+}
+
 .agile-box {
     flex: 1 1 100%;
     background-color: #F6F7F8;
@@ -457,7 +493,6 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    margin-top: 1rem;
 }
 
 .agile-box h3 {
@@ -468,7 +503,6 @@ h2 {
 .agile-content p {
     color: #3E5060;
     font-size: 1rem;
-    margin-top: 0.5rem;
     text-align: justify;
 }
 
@@ -479,7 +513,7 @@ h2 {
 
 .agile-content {
     flex: 1 1 45%;
-    padding: 1.5rem;
+    padding: 0 1rem 1rem 1rem;
 }
 
 .vertical-separator {

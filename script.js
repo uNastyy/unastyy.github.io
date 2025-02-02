@@ -64,7 +64,15 @@ $(document).ready(function () {
     },
     loop: true, // Pour un défilement infini
 });
-
+new fullpage('#fullpage', {
+  navigation: true,
+  responsiveWidth: 700,
+  anchors: ['accueil', 'a-propos', 'competences', 'projets', 'contact'],
+  parallax: true,
+  onLeave: function(origin, destination, direction){
+      console.log("Leaving section" + origin.index);
+  },
+});
   // initialize wow.js
   new WOW().init();
 });
