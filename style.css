@@ -177,6 +177,7 @@ body {
     padding: 15px;
 }
 
+
 .blinking-cursor {
     animation: blink 1s step-end infinite;
     color: var(--header);
@@ -195,9 +196,9 @@ body {
 }
 
 .photo img {
-    width: 170px;
+    width: 160px;
     /* Taille de l'avatar */
-    height: 170px;
+    height: 160px;
     /* Taille de l'avatar */
     border-radius: 50%;
     /* Transformer en cercle */
@@ -838,7 +839,7 @@ footer a:hover {
     left: 1px;
   }
   
-  .tabs .content section div {
+  .tabs .content section .right-content {
     padding-left: 20px; /* Ajouter un peu d'espace entre l'image et le texte */
   }
   
