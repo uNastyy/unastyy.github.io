@@ -286,6 +286,7 @@ h2 {
 }
 
 .resume {
+  border: none;
   text-align: center;
   display: inline-block;
   position: relative;
@@ -1311,5 +1312,120 @@ footer a:hover {
 
   60% {
     transform: translateY(-15px);
+  }
+}
+
+#popup {
+  display: none;
+}
+
+/* Styles pour la popup */
+.popup {
+  display: none; /* Cacher la popup par défaut */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond semi-transparent */
+  -webkit-backdrop-filter: blur(5px); /* Ajouter un effet de flou pour Safari */
+  backdrop-filter: blur(5px); /* Ajouter un effet de flou */
+}
+
+.popup-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre */
+  animation: fadeIn 0.3s ease-in-out; /* Ajouter une animation d'apparition */
+}
+
+.close-popup {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-popup:hover,
+.close-popup:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #1B263B;
+  text-align: center;
+}
+
+.popup-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.popup-content ul li {
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  text-align: center;
+  color: #3E5060;
+  font-weight: 500;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.open-popup {
+  transition: all 0.2s linear 0s;
+  position: relative;
+  /* Assurez-vous que l'élément parent a une position relative */
+
+  &:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f02e";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    right: -30px;
+    width: 30px;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    transition: all 0.2s linear 0s;
+    text-align: center;
+  }
+
+  &:hover {
+    text-indent: -30px;
+
+    &:before {
+      right: 0;
+      text-indent: 0px;
+    }
   }
 }

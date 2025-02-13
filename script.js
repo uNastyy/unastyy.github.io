@@ -37,3 +37,45 @@ $(document).ready(function () {
   // initialize wow.js
   new WOW().init();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const popup = document.getElementById('popup');
+  const popupList = document.getElementById('popup-list');
+  const closePopup = document.getElementsByClassName('close-popup')[0];
+
+  document.querySelectorAll('.open-popup').forEach(button => {
+    button.addEventListener('click', function() {
+      const project = this.getAttribute('data-project');
+      let skills = [];
+
+      if (project === 'palendar') {
+        skills = ['Réaliser', 'Optimiser', 'Administrer', 'Gérer', 'Conduire', 'Collaborer'];
+      } else if (project === 'messagerie') {
+        skills = ['Réaliser', 'Gérer'];
+      } else if (project === 'kitchen-wizard') {
+        skills = ['Adminstrer', 'Gérer', 'Réaliser'];
+      } else if (project === 'nuit-info') {
+        skills = ['Réaliser', 'Optimiser', 'Administrer', 'Gérer', 'Conduire', 'Collaborer'];
+      }
+
+      popupList.innerHTML = '';
+      skills.forEach(skill => {
+        const li = document.createElement('li');
+        li.textContent = skill;
+        popupList.appendChild(li);
+      });
+
+      popup.style.display = 'block';
+    });
+  });
+
+  closePopup.addEventListener('click', function() {
+    popup.style.display = 'none';
+  });
+
+  window.addEventListener('click', function(event) {
+    if (event.target == popup) {
+      popup.style.display = 'none';
+    }
+  });
+});
